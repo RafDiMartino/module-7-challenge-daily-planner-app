@@ -9,16 +9,47 @@ textarea {
   border: none;
   resize: none;
   color: #000000;
-  border-left: 1px solid black;
+  border: 1px solid black;
   padding: 10px;
+  width: 100%;
+  height: 100%;
+}
+
+textarea:focus {
+  background-color: #efefef;
+  border: 2px solid #000000;
+  outline: none;
 }
 
 .jumbotron {
   text-align: center;
-  background-color: transparent;
+  background-color: #efefef;
   color: black;
   border-radius: 0;
-  border-bottom: 10px solid black;
+  border-bottom: 3px solid black;
+  /* padding-left: 0; */
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 70px;
+  margin-bottom: .2rem;
+  transition: all .3s ease-in-out;
+}
+
+.wrapper:hover,
+.wrapper:focus-within {
+  transform: scale(1.02);
 }
 
 .description {
@@ -34,44 +65,68 @@ textarea {
   white-space: pre-wrap;
   height: 80px;
   border-top: 1px solid white;
+
 }
 
 .hour {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: #ffffff;
   color: #000000;
-  border-top: 1px dashed #000000;
+  border: 1px solid #000000;
+  height: 100%;
+  width: 100px;
+  font-size: large;
+  font-weight: bold;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
 }
 
 .past {
   background-color: #d3d3d3;
-  color: white;
+  color: black;
 }
 
 .present {
   background-color: #ff6961;
-  color: white;
+  color: black;
 }
 
 .future {
   background-color: #77dd77;
-  color: white;
+  color: black;
 }
 
 .saveBtn {
-  border-left: 1px solid black;
+  border: 1px solid black;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
   background-color: #06aed5;
-  color: white;
+  color: rgb(255, 255, 255);
+  height: 100%;
+  width: 100px;
+  font-size: 25px;
+  
 }
 
-.saveBtn i:hover {
-  font-size: 20px;
-  transition: all 0.3s ease-in-out;
+.saveBtn:hover i,
+.saveBtn:focus i{
+  color: #000000;
+}
+
+.saveBtn:focus {
+  outline: none;
+  border: 2px solid black;
 }
 
 .hideMessage {
-
-visibility: hidden;
-
+  visibility: hidden;
+  color: #ff6961;
+}
+code {
+  color: #ff6961;
+}
+.green {
+  color: #77dd77;
 }
