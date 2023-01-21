@@ -27,7 +27,10 @@ textarea:focus {
   color: black;
   border-radius: 0;
   border-bottom: 3px solid black;
-  /* padding-left: 0; */
+}
+
+.lead {
+  margin-top: 1rem;
 }
 
 .container {
@@ -35,6 +38,7 @@ textarea:focus {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-bottom: 4rem;
 }
 
 .wrapper {
@@ -129,4 +133,20 @@ code {
 }
 .green {
   color: #77dd77;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #efefef;
+  padding: 2rem .5rem;
+  margin: 0;
+  border-top: 3px solid black;
+}
+
+footer p {
+  margin: 0;
+  font-size: 14px;
+  font-weight: bold;
 }
