@@ -1,6 +1,6 @@
 const currentDay = $("#currentDay");
 const container = $(".container");
-let hours = { start: 9, end: 18 };
+let hours = { start: 9, end: 17 };
 
 // Function that handle displaying the time
 function displayTime() {
