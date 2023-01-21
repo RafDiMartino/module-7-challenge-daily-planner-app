@@ -55,5 +55,16 @@ function saveBtnHandler(e) {
     localStorage.removeItem(hour)
   }else {
     localStorage.setItem(hour, textarea.val());
+    displaySavedMessage()
   }
+}
+
+// Function that handle the saved message display
+function displaySavedMessage() {
+  let displayMessage = $("#saved-message")
+  displayMessage.toggleClass("hideMessage");
+  setTimeout(() => {
+  displayMessage.toggleClass("hideMessage")
+  }, 2000)
+
 }
