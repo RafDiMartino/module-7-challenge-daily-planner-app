@@ -21,10 +21,12 @@ for (let i = hours.start; i <= hours.end; i++) {
   btnSave.addClass("saveBtn")
   btnSave.attr("data-hour", i)
   btnSave.html("<i class='fa-solid fa-floppy-disk'></i>")
-
+  // Event listener that fires the saveBtnHandler
+  btnSave.on("click", saveBtnHandler)
   let label = $("<label>")
   let textarea = $("<textarea>")
   textarea.attr("id", i)
+  textarea.val(localStorage.getItem(i))
   
   let displayHour = moment(`2023-01-01T${i < 10 ? "0" + i : i}:00:00`).format("ha")
   textAreaWrapper.append(label).text(displayHour)
@@ -39,5 +41,19 @@ for (let i = hours.start; i <= hours.end; i++) {
     textarea.addClass("present")
   } else {
     textarea.addClass("future")
+  }
+}
+
+// Function that handle the saving to local storage
+function saveBtnHandler(e) {
+
+  let button = $(e.currentTarget)
+  let hour = button.attr("data-hour")
+  let textarea = $(`#${hour}`)
+
+  if (textarea.val().trim() === "") {
+    localStorage.removeItem(hour)
+  }else {
+    localStorage.setItem(hour, textarea.val());
   }
 }
