@@ -18,14 +18,14 @@ for (let i = hours.start; i <= hours.end; i++) {
   textAreaWrapper.addClass("wrapper")
   container.append(textAreaWrapper)
   
-  let btnSave = $("<button>")
+  let btnSave = $("<button aria-label='save-button'>")
   btnSave.addClass("saveBtn")
   btnSave.attr("data-hour", i)
   btnSave.html("<i class='fas fa-save'></i>")
   // Event listener that fires the saveBtnHandler
   btnSave.on("click", saveBtnHandler)
   let label = $("<span>")
-  let textarea = $("<textarea>")
+  let textarea = $("<textarea aria-label='event'>")
   textarea.attr("id", i)
   textarea.val(localStorage.getItem(i))
   
